@@ -2,23 +2,23 @@
 //definição de classe Caneta
 class Caneta{
 	//definição dos atributos
-	var $modelo;
-	var $cor;
-	var $ponta;
-	var $carga;
-	var $tampada;
+	public $modelo;
+	public $cor;
+	private $ponta;
+	protected $carga;
+	protected $tampada;
 	//definição dos métodos
-	function rabiscar(){
+	public function rabiscar(){
 		if($this->tampada == true){
 			echo "Erro! Não posso rabiscar.";
 		}else{
 			echo "Estou rabiscando...";
 		}
 	}
-	function tampar(){
+	public function tampar(){
 		$this->tampada = true;
 	}
-	function destampar(){
+	private function destampar(){
 		$this->tampada = false;
 	}
 }
