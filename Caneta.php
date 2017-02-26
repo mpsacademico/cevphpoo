@@ -1,25 +1,35 @@
 <?php
-//definição de classe Caneta
-class Caneta{
-	//definição dos atributos
-	public $modelo;
-	public $cor;
+class Caneta{	
+	public $modelo;	
 	private $ponta;
-	protected $carga;
-	protected $tampada;
-	//definição dos métodos
-	public function rabiscar(){
-		if($this->tampada == true){
-			echo "Erro! Não posso rabiscar.";
-		}else{
-			echo "Estou rabiscando...";
-		}
+	private $cor;
+	
+	/*public function __construct(){
+		$this->cor = "Azul";
+	}*/
+	
+	public function Caneta($m, $p, $c){
+		$this->modelo = $m;
+		$this->ponta = $p;
+		$this->c = $c;
+		$this->tampar();
 	}
+	
 	public function tampar(){
-		$this->tampada = true;
+		$this->tampada = true; //atributo implícito
 	}
-	private function destampar(){
-		$this->tampada = false;
+	
+	public function getModelo(){
+		return $this->modelo;
+	}
+	public function setModelo($m){
+		$this->modelo = $m;
+	}
+	public function getPonta(){
+		return $this->ponta;
+	}
+	public function setPonta($p){
+		$this->ponta = $p;
 	}
 }
 ?>
