@@ -9,8 +9,12 @@ class Aluno extends Pessoa{
 		echo "Um novo aluno foi criado!<br>";
 	}
 	
-	public function cancelarMatr(){
+	public final function cancelarMatr(){ //não pode ser sobrescrito
 		echo "A matrícula será cancelada!<br>";
+	}
+	
+	public function pagarMensal(){
+		echo "Pagando mensalidade de {$this->getNome()}!!!<br>";
 	}
 	
 	public function getMatr(){

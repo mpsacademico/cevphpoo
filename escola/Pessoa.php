@@ -1,5 +1,5 @@
 <?php
-class Pessoa{
+abstract class Pessoa{ //não pode ser diretamente instaciada
 	
 	private $nome;
 	private $idade;	
