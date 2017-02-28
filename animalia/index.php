@@ -22,8 +22,9 @@
 	$p = new Peixe();
 	$p->locomover();
 	
-	$c = new Canguru();
+	$c = new Canguru(true);
 	$c->locomover();
+	$c->locomoverComBebe(true); //sobrecarga FAIL!
 	
 	$m->emitirSom();
 	$r->emitirSom();
